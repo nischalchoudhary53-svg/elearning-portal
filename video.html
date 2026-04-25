@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Video Player</h3>
+<video width="100%" controls>
+  <source src="{{ url_for('static', filename='uploads/' + filename) }}" type="video/mp4">
+</video>
+{% endblock %}

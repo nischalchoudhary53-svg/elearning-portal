@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Courses</h2>
+<div class="row">
+{% for course in courses %}
+<div class="col-md-4">
+<div class="card p-3 mb-3">
+<h5>{{ course.title }}</h5>
+
+{% if course.type == 'video' %}
+<a href="/view/{{ course.filename }}" class="btn btn-success">Watch</a>
+{% else %}
+<a href="/download/{{ course.filename }}" class="btn btn-primary">Download</a>
+{% endif %}
+
+</div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

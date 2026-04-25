@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Admin Panel</h2>
+<form method="POST" enctype="multipart/form-data">
+<input name="title" class="form-control mb-2" placeholder="Course Title">
+<input type="file" name="file" class="form-control mb-2">
+<button class="btn btn-success">Upload</button>
+</form>
+{% endblock %}
